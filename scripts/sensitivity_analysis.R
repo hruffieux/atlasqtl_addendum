@@ -31,8 +31,8 @@ max_tot_pve <- 0.05 # upper bound on the proportion of response variance explain
 sh2 <- 5           # second shape parameter for the beta distribution controlling the hotspot propensities, 
                    # first shape parameter set to 1, so left-skewed (hotspots mostly small with a few large ones)
 
-real_snps_path <- "../real_snps.rds" # if simulation based on real SNPs, provide a path to and rds file containing a SNP matrix;
-                                     # otherwise the SNPs will be simulated
+real_snps_path <- "" # "../real_snps.rds" # if simulation based on real SNPs, provide a path to and rds file containing a SNP matrix;
+                                     # otherwise, e.g., providing the empty string, the SNPs will be simulated
 
 if (file.exists(real_snps_path)) { # use real SNP data (need to be provided by the user)
   
@@ -45,7 +45,7 @@ if (file.exists(real_snps_path)) { # use real SNP data (need to be provided by t
   
   mess_snps <- "_real_snps"
   
-  X <- X[sample(1:nrow(X), n), sample(1:ncol(X), p), drop = FALSE]
+  X <- X[1:n, 1:p, drop = FALSE]
   
 } else { # simulate SNPs under Hardy-Weinberg equilibrium and with block-correlation structure 
   
