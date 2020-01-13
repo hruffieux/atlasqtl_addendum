@@ -27,7 +27,7 @@ n <- 413             # number of samples
 q <- 100; q0 <- 50   # number of responses (phenotypes); number of active responses
 p <- 1000; p0 <- 20  # number of candidate predictors (SNPs); number of active predictors
 
-max_tot_pve <- 0.1 # upper bound on the proportion of response variance explained by the predictors 
+max_tot_pve <- 0.05 # upper bound on the proportion of response variance explained by the predictors 
 sh2 <- 5           # second shape parameter for the beta distribution controlling the hotspot propensities, 
                    # first shape parameter set to 1, so left-skewed (hotspots mostly small with a few large ones)
 
@@ -180,7 +180,6 @@ list_hyperparam <- list(c(1, 2),
                         c(1, 5), 
                         c(1, 10), 
                         c(2, 5), 
-                        c(5, 10), 
                         c(5, 25), 
                         c(10, 50),
                         c(10, 100)) 
