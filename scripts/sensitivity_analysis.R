@@ -39,8 +39,8 @@ if (file.exists(real_snps_path)) { # use real SNP data (need to be provided by t
   X <- readRDS(real_snps_path) # must be a matrix of genotypes of size n_real x p_real where n_real >= n and p_real >= p
                                
   stopifnot(is.matrix(X))
-  stopifnot(nrow(X) > n)
-  stopifnot(ncol(X) > p)
+  stopifnot(nrow(X) >= n)
+  stopifnot(ncol(X) >= p)
   stopifnot(all(X %in% 0:2)) # SNPs must be coded 0-1-2 with no missing values
   
   mess_snps <- "_real_snps"
