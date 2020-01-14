@@ -23,7 +23,7 @@ n_cpus <- 32 # number of cores
 require(echoseq)  # package for generation of genotypes and molecular levels; @github/hruffieux/echoseq
 require(atlasqtl) # package for joint modelling of QTL hotspots; @github/hruffieux/atlasqtl
 
-n <- 413             # number of samples
+n <- 400             # number of samples
 q <- 100; q0 <- 50   # number of responses (phenotypes); number of active responses
 p <- 1000; p0 <- 20  # number of candidate predictors (SNPs); number of active predictors
 
@@ -233,4 +233,34 @@ if(bool_save){
 
 
 # sessionInfo()
-
+#
+# R version 3.6.1 (2019-07-05)
+# Platform: x86_64-apple-darwin15.6.0 (64-bit)
+# Running under: macOS Mojave 10.14.5
+# 
+# Matrix products: default
+# BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+# LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+# 
+# Random number generation:
+#   RNG:     L'Ecuyer-CMRG 
+#  Normal:  Inversion 
+#  Sample:  Rejection 
+#  
+# locale:
+# [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
+# 
+# attached base packages:
+# [1] stats     graphics  grDevices utils     datasets  methods   base     
+# 
+# other attached packages:
+# [1] ROCR_1.0-7     gplots_3.0.1.1 atlasqtl_0.1.2 echoseq_0.2.3 
+# 
+# loaded via a namespace (and not attached):
+#  [1] Rcpp_1.0.3          mvtnorm_1.0-11      lattice_0.20-38    
+#  [4] gtools_3.8.1        PowerTOST_1.4-8     bitops_1.0-6       
+#  [7] grid_3.6.1          plyr_1.8.5          KernSmooth_2.23-16 
+# [10] TeachingDemos_2.10  cubature_2.0.3      gdata_2.18.0       
+# [13] Matrix_1.2-17       tools_3.6.1         RcppEigen_0.3.3.7.0
+# [16] parallel_3.6.1      compiler_3.6.1      gsl_2.1-6          
+# [19] caTools_1.17.1.2 
